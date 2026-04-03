@@ -1,0 +1,8 @@
+[Unit]
+Description=Map IR codes
+
+[Service]
+ExecStart=ir-keytable -c -w /home/pi/controller-go/L336
+
+[Install]
+WantedBy=default.target

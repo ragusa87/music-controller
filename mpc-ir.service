@@ -1,0 +1,13 @@
+[Unit]
+Description=Run MPC command based on inputs
+
+[Service]
+#User=pi
+#Group=pi
+WorkingDirectory=/home/pi/controller-go
+ExecStart=bash -c "bin/controller"
+Restart=always
+RestartSec=30
+Environment=XDG_RUNTIME_DIR="/run/user/1000"
+[Install]
+WantedBy=default.target
